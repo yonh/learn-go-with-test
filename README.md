@@ -8,7 +8,7 @@ https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/iteration
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/arrays-and-slices
 ##### 11-13 structs,methods and interfaces
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/structs-methods-and-interfaces
-##### 14 pointers and errors
+##### 14-20 pointers and errors
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/pointers-and-errors
 ##### 
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/maps
