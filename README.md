@@ -12,9 +12,9 @@ https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/structs-methods-and
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/pointers-and-errors
 ##### 21-27 map
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/maps
-##### 28 dependency injection
+##### 28-29 dependency injection
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/dependency-injection
-##### 
+##### 30 mocking
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/mocking
 ##### 
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/concurrency
