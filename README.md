@@ -29,7 +29,7 @@ https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/concurrency
 在这一章节，我们对`CheckWebsites`进行了重构，使用`goroutine`使得程序的检查结果部分得以并行运行，这大大加速了程序的执行  
 同时我们也要了解在使用goroutine并行写入的时候会导致写入竞争，我们通过`channels`来组织和控制不同进程之间的交流，使我们能够避免 race condition（竞争条件） 的问题。
 
-##### 
+##### 40- selete
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/select
 ##### 
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/reflection
