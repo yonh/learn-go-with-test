@@ -39,8 +39,15 @@ httptest
 一种方便地创建测试服务器的方法，这样你就可以进行可靠且可控的测试。  
 使用和 net/http 相同的接口作为「真实的」服务器会和真实环境保持一致，并且只需更少的学习。
 
-##### 
+##### 44-54 reflection
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/reflection
+
+介绍了 reflect 包中的一些概念。  
+使用递归遍历任意数据结构。  
+这只是 reflection 的一个小方面。Go 博客上有[一篇精彩的文章](https://blog.golang.org/laws-of-reflection)介绍了更多细节。  
+现在你已经了解了反射，请尽量避免使用它。
+
+
 ##### 
 https://studygolang.gitbook.io/learn-go-with-tests/gou-jian-ying-yong-cheng-xu/app-intro
 ##### 
