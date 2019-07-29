@@ -29,8 +29,16 @@ https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/concurrency
 在这一章节，我们对`CheckWebsites`进行了重构，使用`goroutine`使得程序的检查结果部分得以并行运行，这大大加速了程序的执行  
 同时我们也要了解在使用goroutine并行写入的时候会导致写入竞争，我们通过`channels`来组织和控制不同进程之间的交流，使我们能够避免 race condition（竞争条件） 的问题。
 
-##### 40- selete
+##### 40-43 selete
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/select
+
+select  
+可帮助你同时在多个 channel 上等待。  
+有时你想在你的某个「案例」中使用 time.After 来防止你的系统被永久阻塞。  
+httptest  
+一种方便地创建测试服务器的方法，这样你就可以进行可靠且可控的测试。  
+使用和 net/http 相同的接口作为「真实的」服务器会和真实环境保持一致，并且只需更少的学习。
+
 ##### 
 https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/reflection
 ##### 
