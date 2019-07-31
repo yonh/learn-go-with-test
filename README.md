@@ -47,12 +47,16 @@ https://studygolang.gitbook.io/learn-go-with-tests/go-ji-chu/reflection
 这只是 reflection 的一个小方面。Go 博客上有[一篇精彩的文章](https://blog.golang.org/laws-of-reflection)介绍了更多细节。  
 现在你已经了解了反射，请尽量避免使用它。
 
-
-##### 
-https://studygolang.gitbook.io/learn-go-with-tests/gou-jian-ying-yong-cheng-xu/app-intro
-##### 
+##### 55-59 http server 
 https://studygolang.gitbook.io/learn-go-with-tests/gou-jian-ying-yong-cheng-xu/http-server
-##### 
+
+**http.Handler**  
+通过实现这个接口来创建 web 服务器  
+用 http.HandlerFunc 把普通函数转化为 `http.Handler`  
+把 httptest.NewRecorder 作为一个 `ResponseWriter` 传进去，这样让你可以监视 `handler` 发送了什么响应
+使用 `http.NewRequest` 构建对服务器的请求
+
+#####  
 https://studygolang.gitbook.io/learn-go-with-tests/gou-jian-ying-yong-cheng-xu/json
 ##### 
 https://studygolang.gitbook.io/learn-go-with-tests/gou-jian-ying-yong-cheng-xu/io
