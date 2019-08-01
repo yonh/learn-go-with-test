@@ -58,6 +58,10 @@ https://studygolang.gitbook.io/learn-go-with-tests/gou-jian-ying-yong-cheng-xu/h
 
 #####  
 https://studygolang.gitbook.io/learn-go-with-tests/gou-jian-ying-yong-cheng-xu/json
+
+Go 有一个内置的路由机制叫做 [ServeMux](https://golang.org/pkg/net/http/#ServeMux)（`request multiplexer`，多路请求复用器），它允许你将 http.Handler 附加到特定的请求路径。
+
+
 ##### 
 https://studygolang.gitbook.io/learn-go-with-tests/gou-jian-ying-yong-cheng-xu/io
 ##### 
