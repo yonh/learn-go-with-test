@@ -94,21 +94,36 @@ func TestStoreWins(t *testing.T) {
 // 构建并运行代码，然后使用 curl 来测试它。
 // 运行几次这条命令 curl -X POST http://localhost:5000/players/Pepper，你换成别的玩家名称也可以
 // 用 curl http://localhost:5000/players/Pepper 获取玩家得分
-func TestRecordingWinsAndRetrivingThem(t *testing.T) {
-	store := InMemoryPlayerStore{map[string]int{}}
-	//server := PlayerServer{&store, &http.ServeMux{}}
-	server := NewPlayerServer(&store)
+func TestRecordingWinsAndRetrievingThem(t *testing.T) {
+	store:= NewInMemoryPlayerStore()
+	server := NewPlayerServer(store)
 	player := "Pepper"
 
 	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
 	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
 	server.ServeHTTP(httptest.NewRecorder(), newPostWinRequest(player))
 
-	response := httptest.NewRecorder()
-	server.ServeHTTP(response, newGetScoreRequest(player))
-	assertStatus(t, http.StatusOK, response.Code)
+	t.Run("get score", func(t *testing.T) {
+		response := httptest.NewRecorder()
+		server.ServeHTTP(response, newGetScoreRequest(player))
+		assertStatus(t, http.StatusOK, response.Code)
 
-	assertResponseBody(t, response.Body.String(), "3")
+		assertResponseBody(t, response.Body.String(), "3")
+	})
+
+	t.Run("get league", func(t *testing.T) {
+		response := httptest.NewRecorder()
+		server.ServeHTTP(response, newLeagueRequest())
+		assertStatus(t, http.StatusOK, response.Code)
+
+		got := getLeagueFromResponse(t, response.Body)
+		want := []Player {
+			{"Pepper", 3},
+		}
+
+		assertLeague(t, got, want)
+	})
+
 }
 
 func TestLeague(t *testing.T) {
